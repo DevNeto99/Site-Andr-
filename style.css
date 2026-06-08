@@ -21,19 +21,6 @@
     --border: #2d3544;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-        --bg: #0f1419;
-        --surface: #1a1f2e;
-        --surface-soft: #242d3d;
-        --text: #e8ecf1;
-        --muted: #a0aac0;
-        --primary: #f28f1f;
-        --accent: #ffffff;
-        --border: #2d3544;
-    }
-}
-
 * {
     box-sizing: border-box;
     margin: 0;

@@ -2,7 +2,6 @@
 // Theme switching functionality
 
 const THEME_KEY = 'theme-preference';
-const themeToggle = document.getElementById('theme-toggle');
 const html = document.documentElement;
 
 // Check for saved theme preference, system preference, or default to 'light'
@@ -36,11 +35,14 @@ function toggleTheme() {
 
 // Initialize theme on page load
 document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('theme-toggle');
     const preference = getThemePreference();
     setTheme(preference);
     
     // Listen for theme toggle button clicks
-    themeToggle?.addEventListener('click', toggleTheme);
+    if (themeToggle) {
+        themeToggle.addEventListener('click', toggleTheme);
+    }
     
     // Listen for system theme changes
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
