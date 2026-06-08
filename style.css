@@ -14,7 +14,7 @@
     --bg: #0f1419;
     --surface: #1a1f2e;
     --surface-soft: #242d3d;
-    --text: #e8ecf1;
+    --text: black;
     --muted: #a0aac0;
     --primary: #f28f1f;
     --accent: #ffffff;
@@ -110,7 +110,7 @@ header {
     padding: 10px 16px;
     border-radius: 999px;
     background: var(--accent);
-    color: #fff;
+    color: var(--surface);
     font-size: 0.85rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
