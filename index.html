@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio do André</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card: rgba(15, 23, 42, 0.95);
+            --text: #e2e8f0;
+            --accent: #38bdf8;
+            --accent-strong: #0ea5e9;
+            --muted: #94a3b8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: radial-gradient(circle at top, rgba(56, 189, 248, 0.18), transparent 35%),
+                        linear-gradient(180deg, #020617 0%, #0f172a 100%);
+            color: var(--text);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: min(1080px, 92%);
+            margin: 0 auto;
+            padding: 40px 0 80px;
+        }
+
+        header {
+            display: grid;
+            gap: 32px;
+            padding: 40px 0;
+        }
+
+        .hero {
+            display: grid;
+            gap: 24px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.6rem, 4vw, 4rem);
+            letter-spacing: -0.04em;
+        }
+
+        .hero p {
+            max-width: 720px;
+            color: var(--muted);
+            font-size: 1.05rem;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 16px;
+            border-radius: 999px;
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--accent);
+            width: fit-content;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-size: 0.8rem;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 22px;
+            border-radius: 999px;
+            border: 1px solid transparent;
+            text-decoration: none;
+            font-weight: 700;
+            transition: transform 200ms ease, background-color 200ms ease, border-color 200ms ease;
+        }
+
+        .button-primary {
+            background: var(--accent);
+            color: #020617;
+        }
+
+        .button-secondary {
+            background: transparent;
+            border-color: rgba(148, 163, 184, 0.35);
+            color: var(--text);
+        }
+
+        .button:hover {
+            transform: translateY(-1px);
+        }
+
+        .section {
+            margin-top: 48px;
+            display: grid;
+            gap: 28px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid rgba(148, 163, 184, 0.08);
+            border-radius: 24px;
+            padding: 28px;
+            box-shadow: 0 24px 80px rgba(15, 23, 42, 0.25);
+        }
+
+        .card h3,
+        .card h2 {
+            margin-bottom: 14px;
+            font-size: 1.4rem;
+        }
+
+        .card p {
+            color: var(--muted);
+            font-size: 0.98rem;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 12px;
+        }
+
+        .skill {
+            padding: 14px 16px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            text-align: center;
+            color: var(--text);
+            font-size: 0.95rem;
+        }
+
+        .projects {
+            display: grid;
+            gap: 20px;
+        }
+
+        .project {
+            display: grid;
+            gap: 14px;
+            padding: 24px;
+            border-radius: 24px;
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid rgba(56, 189, 248, 0.12);
+        }
+
+        .project h4 {
+            margin-bottom: 6px;
+        }
+
+        .project p {
+            margin-bottom: 10px;
+            color: var(--muted);
+        }
+
+        .project span {
+            display: inline-block;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        footer {
+            margin-top: 56px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        @media (min-width: 960px) {
+            header {
+                grid-template-columns: 1.2fr 0.8fr;
+                align-items: center;
+            }
+
+            .hero {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <header>
+            <div class="hero">
+                <span class="badge">Portfólio profissional</span>
+                <h1>André — design, desenvolvimento e resultados digitais</h1>
+                <p>Olá! Sou o André, especialista em criar experiências digitais com clareza, usabilidade e impacto. Trabalho com web design, desenvolvimento front-end e soluções completas para marcas que querem crescer online.</p>
+                <div class="hero-actions">
+                    <a href="#projetos" class="button button-primary">Ver projetos</a>
+                    <a href="#contato" class="button button-secondary">Fale comigo</a>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Sobre o André</h3>
+                <p>Com mais de 10 anos de experiência no mercado, André desenvolve sites, aplicações e identidades visuais que unem tecnologia e estratégia. Ele já entregou projetos para startups, agências e empresas que precisavam transformar ideias em produtos digitais consistentes.</p>
+                <div class="skills">
+                    <span class="skill">Web Design</span>
+                    <span class="skill">HTML & CSS</span>
+                    <span class="skill">JavaScript</span>
+                    <span class="skill">React</span>
+                    <span class="skill">UX/UI</span>
+                    <span class="skill">Branding</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="section" id="projetos">
+            <div class="card">
+                <h2>Projetos recentes</h2>
+                <p>Cada trabalho é pensado para entregar resultado, posicionamento e uma experiência confiável para usuários e clientes.</p>
+            </div>
+            <div class="projects">
+                <article class="project">
+                    <h4>Site institucional para agência criativa</h4>
+                    <p>Desenvolvimento de um site responsivo com foco em portfólio, presença de marca e geração de contatos qualificados.</p>
+                    <span>Design | Front-end | Performance</span>
+                </article>
+                <article class="project">
+                    <h4>Landing page de lançamento de produto</h4>
+                    <p>Criação de uma landing page altamente conversiva para captar leads e apresentar as funcionalidades do produto de forma clara.</p>
+                    <span>UX | Copy | Otimização</span>
+                </article>
+                <article class="project">
+                    <h4>Aplicação web para gestão interna</h4>
+                    <p>Interface moderna e acessível para um sistema de controle interno, com dashboards, formulários e integração com APIs.</p>
+                    <span>React | API | Usabilidade</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="card">
+                <h2>Como trabalho</h2>
+                <div class="cards">
+                    <div class="card">
+                        <h3>Planejamento estratégico</h3>
+                        <p>Defino objetivos claros, público-alvo e jornada do usuário antes de começar qualquer criação.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Design com foco em conversão</h3>
+                        <p>Construo interfaces elegantes e funcionais, com atenção ao visual e à experiência do usuário.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Entrega rápida e confiável</h3>
+                        <p>Trabalho em ciclos ágeis, mantendo comunicação constante e entregando soluções prontas para uso.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="contato">
+            <div class="card">
+                <h2>Vamos conversar?</h2>
+                <p>Se você tem um projeto, uma ideia ou quer renovar sua presença digital, vamos construir juntos uma solução de alto impacto.</p>
+                <p><strong>Email:</strong> contato@andre.dev</p>
+                <p><strong>Telefone:</strong> +55 11 99999-0000</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 André — Portfólio digital, design e desenvolvimento web.</p>
+        </footer>
+    </main>
+</body>
+</html>
